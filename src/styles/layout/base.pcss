@@ -18,6 +18,11 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: $text-color;
+  background: #f3f3f3;
+  font-family: "Montserrat", sans-serif;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 50px;
 }
 
 .wrapper {
@@ -28,14 +33,33 @@ body {
 
 .container {
   margin: 0 auto;
-  max-width: 1480px;
-  width: 95%;
+  max-width: 1280px;
+  width: 100%;
   // width: 1490px;
+  &--header {
+    max-width: 1053px;
+    max-height: 702px;
+    height: 100%;
+  }
+  &--colors {
+    margin: 0;
+    width: 100%;
+    max-width: 2154px;
+  }
+
+  &--phones {
+    max-width: 100%;
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+  }
 
   @include phones {
     width: 85%;
   }
 }
+
+
 
 .fullscreen-section {
   height: 100vh;

@@ -1,0 +1,52 @@
+.footer {
+    height: 1180px;
+    position: relative;
+    padding: 0 24px;
+    &__content {
+        background: #fff;
+        height: 100%;
+    }
+    &__triangle {
+        width: 0; 
+        height: 0;
+        border-bottom: 606px solid #f3f3f3;
+        border-left: 1020px solid transparent;
+        position:absolute;
+        bottom: 0;
+        right: 0;       
+    }
+    &__desc {
+        position: absolute;
+        bottom: 342px;
+        left: 170px;
+        &-text {
+            color: #2e2e2e;
+            font-family: "Montserrat";
+            font-size: 28px;
+            font-weight: 500;
+            line-height: 50px;
+            margin-bottom: 20px;
+        }
+        &-link {
+            color: #ff3d13;
+            font-family: "Montserrat";
+            font-size: 16px;
+            font-weight: 400;
+            text-decoration: none;
+            line-height: 1;
+            z-index: 3;
+            &:after {
+                display: block;
+                content: "";
+                height: 2px;
+                width: 0%;
+                background-color: #ff3d13;
+                transition: width .3s ease-in-out;
+                opacity: 0.7;
+            }
+            &:hover:after, &:focus:after {
+                width: 45%;
+            }
+        }
+    }
+}

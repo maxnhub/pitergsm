@@ -1,0 +1,36 @@
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  width: 1053px;
+  height: 702px;
+  &__logo {
+    display: flex;
+    cursor: pointer;
+    text-decoration: none;
+    &:hover {
+      & .header__logo-name {
+        background: linear-gradient(45deg, #3996e0 0%, #81b520 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        color: #3996e0;
+      }
+    }
+    &-icon {
+      width: 43px;
+      height: 48px;
+      
+      margin-right: 20px;
+      &-img {
+        
+      }
+    }
+    &-name {
+      color: $text-color;
+      font-family: "Montserrat";
+      font-size: 28px;
+      font-weight: 500;
+    }
+  }
+}

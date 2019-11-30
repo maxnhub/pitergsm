@@ -7,10 +7,192 @@ html(lang="en")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     meta(http-equiv="X-UA-Compatible", content="ie=edge")
     link(href="https://img.icons8.com/pastel-glyph/64/000000/hearts.png" rel="shortcut icon" type="image/x-icon")
-    title Portfolio | main page
+    link(href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet")
+    link(rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.css")
+    link(rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css")
+    title Pitergsm | portfolio main page
   body
     .wrapper
       .maincontent
-        +image('content/user.jpg', 'user-pic')
-        +icon('link', 'link-class')
-        .icon-bg
+        section.section--header
+          .container.container--header
+            header.header
+              a.header__logo(href="#")
+                .header__logo-icon
+                  //- include components/logo.html
+                  +image('content/pitergsm-logo.png', 'header__logo-icon-img')
+                h1.header__logo-name pitergsm
+        section.section--notebook
+          .notebook
+            +image('content/notebook.png', 'notebook__image')
+        section.section--desc
+          .desc
+            .desc-field
+              p.desc-field__text Интернет-магазин цифровой и бытовой етехники PiterGsm с 2008 года предоставляет самые выгодные цены на свою продукцию. 
+              p.desc-field__text В тесном сотрудничестве с руководством компании был разработак уникальный стиль, котрый был так же выдрежан в оформлении страниц социальных сетей. 
+              p.desc-field__text Яркий и динамичный дизайн в сочетании со светлыми фоновыми тонами, аккуратной типографикой с гротескными гарнтитурами повысил лояльность покупателй интернет-магазина, увеличив коверсионные показатели в несколько раз.
+        section.section--colors
+          h2.section-quote Цветовая схема
+          .container.container--colors.swiper-container
+            ul.colors.swiper-wrapper
+              li.colors__item.swiper-slide
+                .colors__item-block.colors__item-block-one
+                  p.colors__item-text #F3F3F3
+                .colors__item-block.colors__item-block-two
+                  p.colors__item-text #ffffff
+              li.colors__item-block.swiper-slide
+                .colors__item-block.colors__item-block-three
+                  p.colors__item-text.colors__item-text--white #3D97DE
+                .colors__item-block.colors__item-block-four
+                  p.colors__item-text.colors__item-text--white #9DBD49
+              li.colors__item-block.swiper-slide
+                .colors__item-block.colors__item-block-five
+                  p.colors__item-text.colors__item-text--white #2777C9
+                .colors__item-block.colors__item-block-six
+                  p.colors__item-text.colors__item-text--white #232325
+        section.section--mainly
+          h2.section-quote Главная страница
+          .container
+            .mainly__image
+              +image('content/landing.png', 'mainly__image-img')
+        section.section--blocks
+          .container
+            .blocks
+              .blocks__desc
+                p.blocks__desc-text Модульная система построения блоков на главной, позволяет, в рамках общего стиля, подать большое количество разнообразных товаров, так чтобы глазу было удобно считывать страницу
+              ul.blocks__visual
+                li.blocks__visual-row.blocks__visual-row--one
+                  .blocks__visual-row-item.blocks__visual-row-item--small
+                  .blocks__visual-row-item.blocks__visual-row-item--green
+                li.blocks__visual-row.blocks__visual-row--two
+                  .blocks__visual-row-item.blocks__visual-row-item--medium
+                  .blocks__visual-row-item.blocks__visual-row-item--medium
+                  .blocks__visual-row-item.blocks__visual-row-item--medium
+                li.blocks__visual-row.blocks__visual-row--three
+                  .blocks__visual-row-item.blocks__visual-row-item--blue
+                  .blocks__visual-row-item.blocks__visual-row-item--small
+                  .blocks__visual-row-item.blocks__visual-row-item--small
+                li.blocks__visual-row.blocks__visual-row--four
+                  .blocks__visual-row-item.blocks__visual-row-item--small
+                  .blocks__visual-row-item.blocks__visual-row-item--small
+                  .blocks__visual-row-item.blocks__visual-row-item--black
+        section.section--graphic
+          .container
+            p.graphic__desc В студии отрисовали простые масштабируемые и узнаваемые иконки для каталога в стиле line-art с фирменным градиентом
+            .graphic__field
+              .graphic__field-main
+                include components/quadrocopter.html
+
+              .graphic__field-aside
+                .graphic__field-aside-row
+                  .graphic__field-aside-row-item.graphic__field-aside-row-item--mac
+                    include components/mac.html
+                  .graphic__field-aside-row-item.graphic__field-aside-row-item--monitor
+                    include components/monitor.html
+                  .graphic__field-aside-row-item.graphic__field-aside-row-item--smartwatch
+                    include components/smartwatch.html
+                  .graphic__field-aside-row-item.graphic__field-aside-row-item--iphone
+                    include components/iphone.html
+                .graphic__field-aside-row
+                  .graphic__field-aside-row-item.graphic__field-aside-row-item--percent
+                    include components/percent.html
+                  .graphic__field-aside-row-item.graphic__field-aside-row-item--ipad
+                    include components/ipad.html
+                  .graphic__field-aside-row-item.graphic__field-aside-row-item--halfphone
+                    include components/halfphone.html
+                  .graphic__field-aside-row-item.graphic__field-aside-row-item--notebook
+                    include components/notebook.html
+                .graphic__field-aside-row
+                  .graphic__field-aside-row-item.graphic__field-aside-row-item--usb
+                    include components/usb.html
+                  .graphic__field-aside-row-item.graphic__field-aside-row-item--photo
+                    include components/photo.html
+                  .graphic__field-aside-row-item.graphic__field-aside-row-item--box
+                    include components/box.html
+                  .graphic__field-aside-row-item.graphic__field-aside-row-item--round
+                    include components/round.html
+        section.section--detail
+          h2.section-quote Детальная страница товара
+          .container
+            .detail__image
+              +image('content/detailpage.png', 'detail__image-img')
+        section.section--pages
+          h2.section-quote Страница со списком товаров
+          .pages__field
+            .pages__image
+              +image('content/orderlist.png', 'pages__image-img')
+            .pages__image
+              +image('content/orderlistdetail.png', 'pages__image-img')
+        section.section--otherpages
+          .pages__field
+            .pages__field-item
+              h2.section-quote Корзина
+              .pages__image.pages__image--other
+                +image('content/bucket.png', 'otherpages__image-img')
+            .pages__field-item
+              h2.section-quote Сравнение товаров
+              .pages__image.pages__image--other
+                +image('content/orderandorder.png', 'otherpages__image-img')
+        section.section--phones
+          .container.container--phones
+            .phones__triangle
+            .phones__bg
+            .phones__percents
+              .phones__percents-circle
+                p.phones__percents-circle-desc 65%
+              p.phones__percents-text Всех посещений сделаны с мобильного устройства, по этому мы  адаптировали все страницы сайта, не упустив ни одной функционального элемента
+            .phones__item.phones__item--one
+              +image('content/phone1.png', 'phones__item-img')
+            .phones__item.phones__item--two
+              +image('content/phone2.png', 'phones__item-img')
+            .phones__item.phones__item--three
+              +image('content/phone3.png', 'phones__item-img')
+            .phones__item.phones__item--four
+              +image('content/phone4.png', 'phones__item-img')
+            .phones__item.phones__item--five
+              +image('content/phone5.png', 'phones__item-img')
+            .phones__item.phones__item--six
+              +image('content/phone6.png', 'phones__item-img')
+            .phones__item.phones__item--seven
+              +image('content/phone7.png', 'phones__item-img')
+        section.section--instagram
+          .instagram__content
+            .instagram__desc
+              p.instagram__desc-text Отдельным этапом сотрудничества с pitergsm была разработка визуальной концепции для instagram. Для каждого вида постов был проработан дизайн, с яркими цветами и динамичными формами стиль, дополняет общую картину .. 
+            ul.instagram__field
+              li.instagram__item
+                +image('content/insta1.png', 'instagram__image')
+              li.instagram__item
+                +image('content/insta2.png', 'instagram__image')
+              li.instagram__item
+                +image('content/insta3.png', 'instagram__image')
+              li.instagram__item
+                +image('content/insta4.png', 'instagram__image')
+              li.instagram__item
+                +image('content/insta5.png', 'instagram__image')
+              li.instagram__item
+                +image('content/insta6.png', 'instagram__image')
+              li.instagram__item
+                +image('content/insta7.png', 'instagram__image')
+              li.instagram__item
+                +image('content/insta8.png', 'instagram__image')
+              li.instagram__item
+                +image('content/insta9.png', 'instagram__image')
+              li.instagram__item
+                +image('content/insta10.png', 'instagram__image')
+              li.instagram__item
+                +image('content/insta11.png', 'instagram__image')
+              li.instagram__item
+                +image('content/insta12.png', 'instagram__image')
+        footer.footer
+          .footer__content
+          .footer__triangle
+          .phones__item.phones__item--eight
+              +image('content/phonebottom.png', 'phones__item-img')
+          .footer__desc
+            p.footer__desc-text Спасибо за внимание
+            a.footer__desc-link(href="#") Перейти на сайт
+
+
+script(src="https://unpkg.com/swiper/js/swiper.js")
+script(src="https://unpkg.com/swiper/js/swiper.min.js")
