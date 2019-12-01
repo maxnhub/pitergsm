@@ -1,5 +1,5 @@
 
-# Сборка webpack
+# Для портфолио Cake.ru
 
 ##  Макс Никульников
 
@@ -15,8 +15,8 @@
 #### How to install and build my app
 
 ```sh
-1. git clone git@github.com:maxnhub/mywebpack.git
-2. cd mywebpack
+1. git clone git@github.com:maxnhub/pitergsm.git
+2. cd pitergsm
 3. npm i
 4. npm run build
 ```
