@@ -2,7 +2,10 @@
     "text-color": "#2e2e2e",
     "links-color": "#4b6fd7",
     "bp-desktop-hd": "1800px",
+    "bp-desktop1400": "1400px",
     "bp-desktop": "1200px",
+    "bp-desktop992": "992px",
     "bp-tablets": "768px",
-    "bp-phones": "480px"
+    "bp-phones": "480px",
+    "bp-phones320": "320px"
 }

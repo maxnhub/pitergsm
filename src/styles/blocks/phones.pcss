@@ -6,7 +6,24 @@
         border-left: 1542px solid transparent;
         position:absolute;
         top: 100px;
-        right: 24px;      
+        right: 24px;
+        @include desktop1400 {
+            right: 20px;
+            border-left: 1380px solid transparent;
+        }      
+        @include desktop992 {
+            border-left: 970px solid transparent;
+            border-bottom: 605px solid #fff;
+        }
+        @include tablets {
+            border-bottom: 583px solid #fff;
+            right: 0.9rem;
+        }
+        @include phones {
+            border-left: 291px solid transparent;
+            border-bottom: 188px solid #fff;
+            top: 26.25rem;
+        }
     }
     &__bg {
         position: absolute;
@@ -15,6 +32,18 @@
         right: 24px;
         width: 1542px;
         background: #fff;
+        @include desktop1400 {
+            width: 97%;
+            right: 1.5%;
+        }
+        @include desktop992 {
+            top: 46.5625rem;
+        }
+        @include phones {
+            top:39.5625rem;
+            width: 91%;
+            right: 4.5%;
+        }
     }
     &__percents {
         width: 289px;
@@ -24,6 +53,17 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        @include desktop992 {
+            top: 40px;
+            right: 70px;
+        }
+        @include tablets {
+            top: 0.5rem;
+            right: 2.375rem;
+        }
+        @include phones {
+            right: 5%;
+        }
         &-circle {
             width: 226px;
             height: 226px;
@@ -54,6 +94,21 @@
         z-index: 2;
         width: 800px;
         height: 493px;
+        @include desktop1400 {
+            width: 750px;
+        }
+        @include desktop992 {
+            width: 600px;
+            height: 375px;
+        }
+        @include tablets {
+            width: 30.5rem;
+            height: 19.4375rem;
+        }
+        @include phones {
+            width: 12.5rem;
+            height: 8.4375rem;
+        }
         &:hover {
             animation: phone-move 3s infinite linear;
             @include phones {
@@ -67,36 +122,172 @@
         &--one {
             top: 321px;
             left: 199px;
+            @include desktop992 {
+                top: 224px;
+                left: 100px;
+            }
+            @include tablets {
+                top: 11rem;
+                left: 4.25rem;
+            }
+            @include phones {
+                top: 25rem;
+                left: 3.25rem;
+            }
         }
         &--two {
             top: 442px;
             left: -327px;
+            @include desktop {
+                top: 407px;
+                left: -265px;
+            }
+            @include desktop992 {
+                top: 350px;
+                left: -210px;
+            }
+            @include tablets {
+                top: 18.875rem;
+                left: -10.125rem;
+            }
+            @include phones {
+                top: 27.875rem;
+                left: -4.125rem;
+            }
         }
         &--three {
             top: 760px;
             left: -524px;
+            @include desktop {
+                top: 693px;
+                left: -430px;
+            }
+            @include desktop992 {
+                top: 580px;
+                left: -336px;
+            }
+            @include tablets {
+                top: 30.25rem;
+                left: -18rem;
+            }
+            @include phones {
+                top: 35.25rem;
+                left: -4rem;
+            
+            }
         }
         &--four {
             top: 812px;
             left: 342px;
+            @include desktop {
+                top: 734px;
+                left: 305px;
+            }
+            @include desktop992 {
+                top: 623px;
+                left: 265px;
+            }
+            @include tablets {
+                top: 32.9375rem;
+                left: 14.5625rem;
+            }
+            @include phones {
+                top: 33.9375rem;
+                left: 6.5625rem;            
+            }
         }
         &--five {
             top: 727px;
             right: -124px;
+            @include desktop1400 {
+                top: 669px;
+                right: -195px;
+            }
+            @include desktop {
+                top: 634px;
+                right: -270px;
+            }
+            @include desktop992 {
+                top: 482px;
+                right: -150px;
+            }
+            @include tablets {
+                top: 25.125rem;
+                right: -6.375rem;
+            }
+            @include phones {
+                top: 31.125rem;
+                right: -3.375rem;
+            }
         }
         &--six {
             bottom: 37px;
             left: 148px;
+            @include desktop {
+                bottom: 3.4375rem;
+                left: 130px;
+            }
+            @include desktop992 {
+                bottom: 11.75rem;
+                left: 129px;
+            }
+            @include tablets {
+                bottom: 18.75rem;
+                left: 7.0625rem;            
+            }
+            @include phones {
+                bottom: 2.75rem;
+                left: 6.0625rem;
+            }
         }
         &--seven {
             bottom: 0;
             right: -252px;
+            @include desktop {
+                bottom: 50px;
+                right: -376px;
+            }
+            @include desktop992 {
+                bottom: 10.125rem;
+                right: -18.5rem;
+            }
+            @include tablets {
+                bottom: 16.125rem;
+                right: -15.5rem;
+            }
+            @include phones {
+                bottom: 3.9rem;
+                right: -6.9rem;         
+            }
         }
         &--eight {
             width: 1160px;
             height: 715px;
             top: 156px;
             right: 118px;
+            @include desktop1400 {
+                width: 1036px;
+                height: 680px;
+                right: 160px;
+            }
+            @include desktop992 {
+                width: 50.75rem;
+                height: 32.5rem;
+                right: 7rem;
+                top: 14rem;
+            }
+            @include tablets {
+                width: 39.75rem;
+                height: 24.5rem;
+                right: 4rem;
+                top: 20rem;
+            }
+            @include phones {
+                width: 20.75rem;
+                height: 17.5rem;
+                right: 1rem;
+                top: -2rem;
+            }
         }
     }
 }

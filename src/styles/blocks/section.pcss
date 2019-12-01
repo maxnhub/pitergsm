@@ -1,5 +1,11 @@
 section {
   padding-top: 200px;
+  @include desktop {
+    padding-top: 100px;
+  }
+  @include phones {
+    padding-top: 50px;
+  }
 }
 
 .section {
@@ -18,17 +24,34 @@ section {
     height: 812px;
     position:relative;
     padding-top: 0;
+    @include desktop {
+      height: 510px;
+    }
+    @include phones {
+      height: 16.875rem;
+    }
   }
   &--desc {
   }
   &--colors {
     padding-top: 240px;
+    @include desktop {
+      padding-top: 140px;
+    }
+    @include phones {
+      padding-top: 50px;
+    }
   }
   &--mainly {
   }
   &--blocks {
   }
   &--graphic {
+    & .container {
+      @include phones {
+        width: 90%;
+      }
+    }
   }
   &--detail {
   }
@@ -39,13 +62,40 @@ section {
     & .section-quote {
       padding-top: 0;
     }
+    @include phones {
+      padding-top: 50px;
+    }
   }
   &--phones {
     padding: 100px 0px 0px;
     height: 1790px;
+    @include desktop {
+      height: 106.375rem;
+    }
+    @include desktop992 {
+      height: 96.375rem;
+    }
+    @include tablets {
+      padding-top: 50px;
+      height: 86.375rem;
+    }
+    @include phones {
+      height: 55.375rem;
+    }
+    & .container {
+      @include phones {
+        width: 100%;
+      }
+    }
   }
   &--instagram {
     padding: 0 24px;
+    @include desktop1400 {
+      padding: 0 1.5%;
+    }
+    @include phones {
+      padding: 0 4.5%;
+    }
   }
 
 }

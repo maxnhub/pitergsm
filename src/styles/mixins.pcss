@@ -4,8 +4,20 @@
   }
 }
 
+@mixin desktop1400() {
+  @media screen and (max-width: $bp-desktop1400) {
+    @content;
+  }
+}
+
 @mixin desktop() {
   @media screen and (max-width: $bp-desktop) {
+    @content;
+  }
+}
+
+@mixin desktop992() {
+  @media screen and (max-width: $bp-desktop992) {
     @content;
   }
 }
@@ -18,6 +30,12 @@
 
 @mixin phones() {
   @media screen and (max-width: $bp-phones) {
+    @content;
+  }
+}
+
+@mixin phones320() {
+  @media screen and (max-width: $bp-phones320) {
     @content;
   }
 }

@@ -2,6 +2,18 @@
     height: 1180px;
     position: relative;
     padding: 0 24px;
+    @include desktop1400 {
+        padding: 0 1.5%;
+    }
+    @include tablets {
+        height: 51.75rem;
+    }
+    @include phones {
+        padding: 0 4.5%;
+    }
+    @include phones {
+        height: 22.75rem;
+    }
     &__content {
         background: #fff;
         height: 100%;
@@ -13,12 +25,24 @@
         border-left: 1020px solid transparent;
         position:absolute;
         bottom: 0;
-        right: 0;       
+        right: 0; 
+        @include tablets {
+            border-bottom: 220px solid #f3f3f3;
+            border-left: 368px solid transparent;
+        }      
     }
     &__desc {
         position: absolute;
         bottom: 342px;
         left: 170px;
+        @include tablets {
+            bottom: 8.375rem;
+            left: 2.625rem;
+        }
+        @include phones {
+            bottom: 9.375rem;
+            left: 1.225rem;
+        }
         &-text {
             color: #2e2e2e;
             font-family: "Montserrat";
@@ -26,6 +50,13 @@
             font-weight: 500;
             line-height: 50px;
             margin-bottom: 20px;
+            @include tablets {
+                margin-bottom: 0;
+                line-height: 1.125rem;
+            }
+            @include phones {
+                font-size: 17px;
+            }
         }
         &-link {
             color: #ff3d13;

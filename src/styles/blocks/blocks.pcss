@@ -1,17 +1,31 @@
 .blocks {
     display: flex;
     justify-content: space-between;
+    @include tablets {
+        flex-direction: column;
+    }
     &__desc {
         display: flex;
         align-items: center;
         width: 579px;
         height: 328px;
         padding-top: 110px;
+        @include tablets {
+            width: 100%;
+            padding-top: 0;
+            margin-bottom: 50px;
+        }
     }
     &__visual {
         width: 335px;
         height: 478px;
         margin-right: 104px;
+        @include tablets {
+            margin: 0 auto;
+        }
+        @include phones {
+            width: 19.9375rem;
+        }
         &-row {
             margin-bottom: 24px;
             display: flex;

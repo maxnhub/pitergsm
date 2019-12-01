@@ -23,6 +23,10 @@ body {
   font-size: 28px;
   font-weight: 500;
   line-height: 50px;
+  @include phones {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .wrapper {
@@ -35,11 +39,22 @@ body {
   margin: 0 auto;
   max-width: 1280px;
   width: 100%;
+  @include desktop {
+    max-width: 1080px;
+  }
+  @include desktop992 {
+    max-width: 932px;
+  }
+  @include tablets {
+    max-width: 50.875rem;
+  }
   // width: 1490px;
   &--header {
     max-width: 1053px;
     max-height: 702px;
     height: 100%;
+    display: flex;
+    justify-content: center;
   }
   &--colors {
     margin: 0;
