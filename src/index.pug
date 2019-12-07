@@ -28,9 +28,9 @@ html(lang="en")
         section.section--desc
           .desc
             .desc-field
-              p.desc-field__text Интернет-магазин цифровой и бытовой етехники PiterGsm с 2008 года предоставляет самые выгодные цены на свою продукцию. 
-              p.desc-field__text В тесном сотрудничестве с руководством компании был разработак уникальный стиль, котрый был так же выдрежан в оформлении страниц социальных сетей. 
-              p.desc-field__text Яркий и динамичный дизайн в сочетании со светлыми фоновыми тонами, аккуратной типографикой с гротескными гарнтитурами повысил лояльность покупателй интернет-магазина, увеличив коверсионные показатели в несколько раз.
+              p.desc-field__text.desc-field__text-one Интернет-магазин цифровой и бытовой техники PiterGsm с 2008 года предоставляет самые выгодные цены на свою продукцию. 
+              p.desc-field__text.desc-field__text-two В тесном сотрудничестве с руководством компании был разработак уникальный стиль, котрый был так же выдрежан в оформлении страниц социальных сетей. 
+              p.desc-field__text.desc-field__text-three Яркий и динамичный дизайн в сочетании со светлыми фоновыми тонами, аккуратной типографикой с гротескными гарнтитурами повысил лояльность покупателй интернет-магазина, увеличив коверсионные показатели в несколько раз.
         section.section--colors
           h2.section-quote Цветовая схема
           .container.container--colors.swiper-container
@@ -62,19 +62,19 @@ html(lang="en")
                 p.blocks__desc-text Модульная система построения блоков на главной, позволяет, в рамках общего стиля, подать большое количество разнообразных товаров, так чтобы глазу было удобно считывать страницу
               ul.blocks__visual
                 li.blocks__visual-row.blocks__visual-row--one
-                  .blocks__visual-row-item.blocks__visual-row-item--small
+                  .blocks__visual-row-item.blocks__visual-row-item--small.blocks__visual-row-item--small-one
                   .blocks__visual-row-item.blocks__visual-row-item--green
                 li.blocks__visual-row.blocks__visual-row--two
-                  .blocks__visual-row-item.blocks__visual-row-item--medium
-                  .blocks__visual-row-item.blocks__visual-row-item--medium
-                  .blocks__visual-row-item.blocks__visual-row-item--medium
+                  .blocks__visual-row-item.blocks__visual-row-item--medium.blocks__visual-row-item--medium-one
+                  .blocks__visual-row-item.blocks__visual-row-item--medium.blocks__visual-row-item--medium-two
+                  .blocks__visual-row-item.blocks__visual-row-item--medium.blocks__visual-row-item--medium-three
                 li.blocks__visual-row.blocks__visual-row--three
                   .blocks__visual-row-item.blocks__visual-row-item--blue
-                  .blocks__visual-row-item.blocks__visual-row-item--small
-                  .blocks__visual-row-item.blocks__visual-row-item--small
+                  .blocks__visual-row-item.blocks__visual-row-item--small.blocks__visual-row-item--small-two
+                  .blocks__visual-row-item.blocks__visual-row-item--small.blocks__visual-row-item--small-three
                 li.blocks__visual-row.blocks__visual-row--four
-                  .blocks__visual-row-item.blocks__visual-row-item--small
-                  .blocks__visual-row-item.blocks__visual-row-item--small
+                  .blocks__visual-row-item.blocks__visual-row-item--small.blocks__visual-row-item--small-four
+                  .blocks__visual-row-item.blocks__visual-row-item--small.blocks__visual-row-item--small-five
                   .blocks__visual-row-item.blocks__visual-row-item--black
         section.section--graphic
           .container
@@ -119,19 +119,19 @@ html(lang="en")
         section.section--pages
           h2.section-quote Страница со списком товаров
           .pages__field
-            .pages__image
+            .pages__image.pages__image-one
               +image('content/orderlist.png', 'pages__image-img')
-            .pages__image
+            .pages__image.pages__image-two
               +image('content/orderlistdetail.png', 'pages__image-img')
         section.section--otherpages
           .pages__field.otherpages__field
             .pages__field-item
               h2.section-quote Корзина
-              .pages__image.pages__image--other
+              .pages__image.pages__image--other.pages__image--other-one
                 +image('content/bucket.png', 'otherpages__image-img')
             .pages__field-item
               h2.section-quote Сравнение товаров
-              .pages__image.pages__image--other
+              .pages__image.pages__image--other.pages__image--other-two
                 +image('content/orderandorder.png', 'otherpages__image-img')
         section.section--phones
           .container.container--phones
@@ -160,29 +160,29 @@ html(lang="en")
             .instagram__desc
               p.instagram__desc-text Отдельным этапом сотрудничества с pitergsm была разработка визуальной концепции для instagram. Для каждого вида постов был проработан дизайн, с яркими цветами и динамичными формами стиль, дополняет общую картину .. 
             ul.instagram__field
-              li.instagram__item
+              li.instagram__item.instagram__item-left
                 +image('content/insta1.png', 'instagram__image')
-              li.instagram__item
+              li.instagram__item.instagram__item-center
                 +image('content/insta2.png', 'instagram__image')
-              li.instagram__item
+              li.instagram__item.instagram__item-right
                 +image('content/insta3.png', 'instagram__image')
-              li.instagram__item
+              li.instagram__item.instagram__item-left
                 +image('content/insta4.png', 'instagram__image')
-              li.instagram__item
+              li.instagram__item.instagram__item-center
                 +image('content/insta5.png', 'instagram__image')
-              li.instagram__item
+              li.instagram__item.instagram__item-right
                 +image('content/insta6.png', 'instagram__image')
-              li.instagram__item
+              li.instagram__item.instagram__item-left
                 +image('content/insta7.png', 'instagram__image')
-              li.instagram__item
+              li.instagram__item.instagram__item-center
                 +image('content/insta8.png', 'instagram__image')
-              li.instagram__item
+              li.instagram__item.instagram__item-right
                 +image('content/insta9.png', 'instagram__image')
-              li.instagram__item
+              li.instagram__item.instagram__item-left
                 +image('content/insta10.png', 'instagram__image')
-              li.instagram__item
+              li.instagram__item.instagram__item-center
                 +image('content/insta11.png', 'instagram__image')
-              li.instagram__item
+              li.instagram__item.instagram__item-right
                 +image('content/insta12.png', 'instagram__image')
         footer.footer
           .footer__content
@@ -196,3 +196,4 @@ html(lang="en")
 
 script(src="https://unpkg.com/swiper/js/swiper.js")
 script(src="https://unpkg.com/swiper/js/swiper.min.js")
+script(src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js")

@@ -19,6 +19,13 @@
     display: flex;
     cursor: pointer;
     text-decoration: none;
+    opacity: 0;
+    transform: translateY(25px);
+    transition: 1s;
+    &.header__logo--show {
+      opacity: 1;
+      transform: translateY(-25px);
+    }
     &:hover {
       & .header__logo-name {
         background: linear-gradient(45deg, #3996e0 0%, #81b520 100%);
@@ -30,7 +37,6 @@
     &-icon {
       width: 43px;
       height: 48px;
-      
       margin-right: 20px;
       &-img {
         

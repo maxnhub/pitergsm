@@ -1,8 +1,18 @@
 .graphic {
   &__desc {
-    width: 519px;
     height: 192px;
     margin-bottom: 100px;
+    width: 42.4375rem;
+    opacity: 0;
+    transform: translateX(-50%);
+    transition: 1s;
+    &--show {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    @include desktopHd {
+      width: 519px;
+    }
     @include tablets {
       width: 100%;
       margin-bottom: 50px;
@@ -18,16 +28,27 @@
     }
 
     &-main {
-      @include tablets {
-        margin-bottom: 50px;
+      transform: translateX(-140%);
+      transition: 1.5s;
+      &--show {
+        transform: translateX(0%);
+        & svg path.quadro {
+          animation: dasharray 4s linear alternate;
+        }
       }
-      &:hover {
-        path.quadro {
+      & svg {
+        width: 900px;
+        height: 900px;
+        
+        @include desktopHd {
+          width: 466px;
+          height: 466px;
+        }
+        & path.quadro {
           fill: none;
           stroke: url(#5t7la);
           stroke-width: 1;
           stroke-dasharray: 550 0;
-          animation: dasharray 5s infinite alternate;
           background-color: linear-gradient(270deg, #3996e0 0%, #81b520 100%);
         }
 
@@ -37,6 +58,10 @@
           }
         }
       }
+      @include tablets {
+        margin-bottom: 50px;
+      }
+      
       @include desktop992 {
         & svg {
           width: 402px;
@@ -54,8 +79,12 @@
     &-aside {
       display: flex;
       flex-direction: column;
-      height: 431px;
-      width: 606px;
+      height: 48.9375rem;
+      width: 56.875rem;
+      @include desktopHd {
+        height: 431px;
+        width: 606px;
+      }
       justify-content: space-between;
       @include desktop992 {
         width: 420px;
@@ -73,6 +102,14 @@
         }
 
         &-item {
+          & svg {
+            width: 140px;
+            height: 140px;
+            @include desktopHd {
+              width: 100%;
+              height: 100%;
+            }
+          }
           @include phones {
             flex: 50%;
             display: flex;
@@ -80,229 +117,313 @@
             padding: 5px;
           }
           &--mac {
-            &:hover {
-              path.mac {
-                fill: none;
-                stroke: url(#mac);
-                stroke-width: 1;
-                stroke-dasharray: 550 0;
-                animation: dasharray 1s infinite alternate;
-                background-color: linear-gradient(270deg, #3996e0 0%, #81b520 100%);
+            transform: translateX(50%);
+            transition: 1s;
+            & path.mac {
+              fill: none;
+              opacity: 0;
+              stroke: url(#mac);
+              stroke-width: 1;
+              stroke-dasharray: 550 0;
+              animation-fill-mode: forwards;
+              background-color: linear-gradient(270deg, #3996e0 0%, #81b520 100%);
+            }
+            @keyframes dasharray {
+              100% {
+                stroke-dasharray: 0 500;
               }
-
-              @keyframes dasharray {
-                100% {
-                  stroke-dasharray: 0 500;
-                }
+            }
+            &--show {
+              transform: translateX(0%);
+              & svg path.mac {
+                opacity: 1;
+                animation: dasharray 4s linear alternate;
               }
             }
           }
 
           &--monitor {
-            &:hover {
-              path.monitor {
-                fill: none;
-                stroke: url(#monitor);
-                stroke-width: 1;
-                stroke-dasharray: 550 0;
-                animation: dasharray 1s infinite alternate;
-                background-color: linear-gradient(270deg, #3996e0 0%, #81b520 100%);
+            transform: translateX(50%);
+            transition: 1s;
+            & path.monitor {
+              fill: none;
+              opacity: 0;
+              stroke: url(#monitor);
+              stroke-width: 1;
+              stroke-dasharray: 550 0;
+              animation-fill-mode: forwards;
+              background-color: linear-gradient(270deg, #3996e0 0%, #81b520 100%);
+            }
+            @keyframes dasharray {
+              100% {
+                stroke-dasharray: 0 500;
               }
-
-              @keyframes dasharray {
-                100% {
-                  stroke-dasharray: 0 500;
-                }
+            }
+            &--show {
+              transform: translateX(0%);
+              & svg path.monitor {
+                opacity: 1;
+                animation: dasharray 4s linear alternate;
               }
             }
           }
 
           &--smartwatch {
-            &:hover {
-              path.smartwatch {
-                fill: none;
-                stroke: url(#smartwatch);
-                stroke-width: 1;
-                stroke-dasharray: 550 0;
-                animation: dasharray 1s infinite alternate;
-                background-color: linear-gradient(270deg, #3996e0 0%, #81b520 100%);
+            transform: translateX(50%);
+            transition: 1s;
+            & path.smartwatch {
+              fill: none;
+              opacity: 0;
+              stroke: url(#smartwatch);
+              stroke-width: 1;
+              stroke-dasharray: 550 0;
+              animation-fill-mode: forwards;
+              background-color: linear-gradient(270deg, #3996e0 0%, #81b520 100%);
+            }
+            @keyframes dasharray {
+              100% {
+                stroke-dasharray: 0 500;
               }
-
-              @keyframes dasharray {
-                100% {
-                  stroke-dasharray: 0 500;
-                }
+            }
+            &--show {
+              transform: translateX(0%);
+              & svg path.smartwatch {
+                opacity: 1;
+                animation: dasharray 4s linear alternate;
               }
             }
           }
 
           &--iphone {
-            &:hover {
-              path.iphone {
-                fill: none;
-                stroke: url(#iphone);
-                stroke-width: 1;
-                stroke-dasharray: 550 0;
-                animation: dasharray 1s infinite alternate;
-                background-color: linear-gradient(270deg, #3996e0 0%, #81b520 100%);
+            transform: translateX(50%);
+            transition: 1s;
+            & path.iphone {
+              fill: none;
+              opacity: 0;
+              stroke: url(#iphone);
+              stroke-width: 1;
+              stroke-dasharray: 550 0;
+              animation-fill-mode: forwards;
+              background-color: linear-gradient(270deg, #3996e0 0%, #81b520 100%);
+            }
+            @keyframes dasharray {
+              100% {
+                stroke-dasharray: 0 500;
               }
-
-              @keyframes dasharray {
-                100% {
-                  stroke-dasharray: 0 500;
-                }
+            }
+            &--show {
+              transform: translateX(0%);
+              & svg path.iphone {
+                opacity: 1;
+                animation: dasharray 4s linear alternate;
               }
             }
           }
 
           &--percent {
-            &:hover {
-              path.percent {
-                fill: none;
-                stroke: url(#percent);
-                stroke-width: 1;
-                stroke-dasharray: 550 0;
-                animation: dasharray 1s infinite alternate;
-                background-color: linear-gradient(270deg, #3996e0 0%, #81b520 100%);
+            transform: translateX(50%);
+            transition: 1s;
+            & path.percent {
+              fill: none;
+              opacity: 0;
+              stroke: url(#percent);
+              stroke-width: 1;
+              stroke-dasharray: 550 0;
+              animation-fill-mode: forwards;
+              background-color: linear-gradient(270deg, #3996e0 0%, #81b520 100%);
+            }
+            @keyframes dasharray {
+              100% {
+                stroke-dasharray: 0 500;
               }
-
-              @keyframes dasharray {
-                100% {
-                  stroke-dasharray: 0 500;
-                }
+            }
+            &--show {
+              transform: translateX(0%);
+              & svg path.percent {
+                opacity: 1;
+                animation: dasharray 4s linear alternate;
               }
             }
           }
 
           &--ipad {
-            &:hover {
-              path.ipad {
-                fill: none;
-                stroke: url(#ipad);
-                stroke-width: 1;
-                stroke-dasharray: 550 0;
-                animation: dasharray 1s infinite alternate;
-                background-color: linear-gradient(270deg, #3996e0 0%, #81b520 100%);
+            transform: translateX(50%);
+            transition: 1s;
+            & path.ipad {
+              fill: none;
+              opacity: 0;
+              stroke: url(#ipad);
+              stroke-width: 1;
+              stroke-dasharray: 550 0;
+              animation-fill-mode: forwards;
+              background-color: linear-gradient(270deg, #3996e0 0%, #81b520 100%);
+            }
+            @keyframes dasharray {
+              100% {
+                stroke-dasharray: 0 500;
               }
-
-              @keyframes dasharray {
-                100% {
-                  stroke-dasharray: 0 500;
-                }
+            }
+            &--show {
+              transform: translateX(0%);
+              & svg path.ipad {
+                opacity: 1;
+                animation: dasharray 4s linear alternate;
               }
             }
           }
 
           &--halfphone {
-            &:hover {
-              path.halfphone {
-                fill: none;
-                stroke: url(#halfphone);
-                stroke-width: 1;
-                stroke-dasharray: 550 0;
-                animation: dasharray 1s infinite alternate;
-                background-color: linear-gradient(270deg, #3996e0 0%, #81b520 100%);
+            transform: translateX(50%);
+            transition: 1s;
+            & path.halfphone {
+              fill: none;
+              opacity: 0;
+              stroke: url(#halfphone);
+              stroke-width: 1;
+              stroke-dasharray: 550 0;
+              animation-fill-mode: forwards;
+              background-color: linear-gradient(270deg, #3996e0 0%, #81b520 100%);
+            }
+            @keyframes dasharray {
+              100% {
+                stroke-dasharray: 0 500;
               }
-
-              @keyframes dasharray {
-                100% {
-                  stroke-dasharray: 0 500;
-                }
+            }
+            &--show {
+              transform: translateX(0%);
+              & svg path.halfphone {
+                opacity: 1;
+                animation: dasharray 4s linear alternate;
               }
             }
           }
 
           &--notebook {
-            &:hover {
-              path.notebook {
-                fill: none;
-                stroke: url(#notebook);
-                stroke-width: 1;
-                stroke-dasharray: 550 0;
-                animation: dasharray 1s infinite alternate;
-                background-color: linear-gradient(270deg, #3996e0 0%, #81b520 100%);
+            transform: translateX(50%);
+            transition: 1s;
+            & path.notebook {
+              fill: none;
+              opacity: 0;
+              stroke: url(#notebook);
+              stroke-width: 1;
+              stroke-dasharray: 550 0;
+              animation-fill-mode: forwards;
+              background-color: linear-gradient(270deg, #3996e0 0%, #81b520 100%);
+            }
+            @keyframes dasharray {
+              100% {
+                stroke-dasharray: 0 500;
               }
-
-              @keyframes dasharray {
-                100% {
-                  stroke-dasharray: 0 500;
-                }
+            }
+            &--show {
+              transform: translateX(0%);
+              & svg path.notebook {
+                opacity: 1;
+                animation: dasharray 4s linear alternate;
               }
             }
           }
 
           &--usb {
-            &:hover {
-              path.usb {
-                fill: none;
-                stroke: url(#usb);
-                stroke-width: 1;
-                stroke-dasharray: 550 0;
-                animation: dasharray 1s infinite alternate;
-                background-color: linear-gradient(270deg, #3996e0 0%, #81b520 100%);
+            transform: translateX(50%);
+            transition: 1s;
+            & path.usb {
+              fill: none;
+              opacity: 0;
+              stroke: url(#usb);
+              stroke-width: 1;
+              stroke-dasharray: 550 0;
+              animation-fill-mode: forwards;
+              background-color: linear-gradient(270deg, #3996e0 0%, #81b520 100%);
+            }
+            @keyframes dasharray {
+              100% {
+                stroke-dasharray: 0 500;
               }
-
-              @keyframes dasharray {
-                100% {
-                  stroke-dasharray: 0 500;
-                }
+            }
+            &--show {
+              transform: translateX(0%);
+              & svg path.usb {
+                opacity: 1;
+                animation: dasharray 4s linear alternate;
               }
             }
           }
 
           &--photo {
-            &:hover {
-              path.photo {
-                fill: none;
-                stroke: url(#photo);
-                stroke-width: 1;
-                stroke-dasharray: 550 0;
-                animation: dasharray 1s infinite alternate;
-                background-color: linear-gradient(270deg, #3996e0 0%, #81b520 100%);
+            transform: translateX(50%);
+            transition: 1s;
+            & path.photo {
+              fill: none;
+              opacity: 0;
+              stroke: url(#photo);
+              stroke-width: 1;
+              stroke-dasharray: 550 0;
+              animation-fill-mode: forwards;
+              background-color: linear-gradient(270deg, #3996e0 0%, #81b520 100%);
+            }
+            @keyframes dasharray {
+              100% {
+                stroke-dasharray: 0 500;
               }
-
-              @keyframes dasharray {
-                100% {
-                  stroke-dasharray: 0 500;
-                }
+            }
+            &--show {
+              transform: translateX(0%);
+              & svg path.photo {
+                opacity: 1;
+                animation: dasharray 4s linear alternate;
               }
             }
           }
 
           &--box {
-            &:hover {
-              path.box {
-                fill: none;
-                stroke: url(#box);
-                stroke-width: 1;
-                stroke-dasharray: 550 0;
-                animation: dasharray 1s infinite alternate;
-                background-color: linear-gradient(270deg, #3996e0 0%, #81b520 100%);
+            transform: translateX(50%);
+            transition: 1s;
+            & path.box {
+              fill: none;
+              opacity: 0;
+              stroke: url(#box);
+              stroke-width: 1;
+              stroke-dasharray: 550 0;
+              animation-fill-mode: forwards;
+              background-color: linear-gradient(270deg, #3996e0 0%, #81b520 100%);
+            }
+            @keyframes dasharray {
+              100% {
+                stroke-dasharray: 0 500;
               }
-
-              @keyframes dasharray {
-                100% {
-                  stroke-dasharray: 0 500;
-                }
+            }
+            &--show {
+              transform: translateX(0%);
+              & svg path.box {
+                opacity: 1;
+                animation: dasharray 4s linear alternate;
               }
             }
           }
 
           &--round {
-            &:hover {
-              path.round {
-                fill: none;
-                stroke: url(#round);
-                stroke-width: 1;
-                stroke-dasharray: 550 0;
-                animation: dasharray 1s infinite alternate;
-                background-color: linear-gradient(270deg, #3996e0 0%, #81b520 100%);
+            transform: translateX(50%);
+            transition: 1s;
+            & path.round {
+              fill: none;
+              opacity: 0;
+              stroke: url(#round);
+              stroke-width: 1;
+              stroke-dasharray: 550 0;
+              animation-fill-mode: forwards;
+              background-color: linear-gradient(270deg, #3996e0 0%, #81b520 100%);
+            }
+            @keyframes dasharray {
+              100% {
+                stroke-dasharray: 0 500;
               }
-
-              @keyframes dasharray {
-                100% {
-                  stroke-dasharray: 0 500;
-                }
+            }
+            &--show {
+              transform: translateX(0%);
+              & svg path.round {
+                opacity: 1;
+                animation: dasharray 4s linear alternate;
               }
             }
           }

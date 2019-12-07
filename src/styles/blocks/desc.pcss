@@ -17,6 +17,15 @@
         }
         &__text {
             margin-bottom: 45px;
+            opacity: 0;
+            transform: translateY(-50%);
+            transition: 1s;
+            &-one, &-two, &-three {
+                &--show {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
             &:last-child {
                 margin-bottom: 0;
             }

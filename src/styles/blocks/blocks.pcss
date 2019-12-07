@@ -7,19 +7,35 @@
     &__desc {
         display: flex;
         align-items: center;
-        width: 579px;
         height: 328px;
         padding-top: 110px;
+        width: 43.1875rem;
+        @include desktopHd {
+            width: 579px;
+        }
         @include tablets {
             width: 100%;
             padding-top: 0;
             margin-bottom: 50px;
         }
+        &-text {
+            opacity: 0;
+            transform: translateX(-50%);
+            transition: 1s;
+            &--show {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
     }
     &__visual {
-        width: 335px;
-        height: 478px;
-        margin-right: 104px;
+        width: 57.9375rem;
+        height: 77.875rem;
+        @include desktopHd {
+            width: 335px;
+            height: 478px;
+            margin-right: 104px;
+        }
         @include tablets {
             margin: 0 auto;
         }
@@ -27,47 +43,106 @@
             width: 19.9375rem;
         }
         &-row {
-            margin-bottom: 24px;
+            margin-bottom: 5.5rem;
             display: flex;
             justify-content: space-between;
+            opacity: 0;
+            transform: translateX(100%);
+            transition: 1s;
+            &--one, &--two, &--three, &--four {
+                &--show {
+                    opacity: 1;
+                    transform: translateX(0%);
+                }
+            }
+            @include desktopHd {
+                margin-bottom: 24px;
+            }
             &:last-child {
                 margin-bottom: 0;
             }
             &-item {
                 &--small {
-                    width: 71px;
-                    height: 96px;
+                    width: 11.4375rem;
+                    height: 15rem;
                     border-radius: 27px;
                     border: 1px solid #d2d2d2;
                     background-color: #efefef;
+                    &-one {
+                        background: url('../images/content/land-1r.png') 50% 50%/ cover no-repeat;
+                    }
+                    &-two {
+                        background: url('../images/content/land2-1.png') 50% 50%/ cover no-repeat;
+                    }
+                    &-three {
+                        background: url('../images/content/land2-3.png') 50% 50%/ cover no-repeat;
+                    }
+                    &-four {
+                        background: url('../images/content/land2-2.png') 50% 50%/ cover no-repeat;
+                    }
+                    &-five {
+                        background: url('../images/content/land3-1.png') 50% 50%/ cover no-repeat;
+                    }
+                    @include desktopHd {
+                        width: 71px;
+                        height: 96px;
+                    }
                 }
                 &--green {
-                    width: 229px;
-                    height: 96px;
+                    width: 44.3125rem;
+                    height: 15rem;
                     border-radius: 36px;
                     border: 1px solid #d2d2d2;
                     background-color: #b8d07b;
+                    background: url('../images/content/landtop.png') 0% 0%/ cover no-repeat;
+                    @include desktopHd {
+                        width: 229px;
+                        height: 96px;
+                    }
                 }
                 &--medium {
-                    width: 97px;
-                    height: 118px;
+                    width: 18.0625rem;
+                    height: 15rem;
                     border-radius: 37px;
                     border: 1px solid #d2d2d2;
                     background-color: #efefef;
+                    &-one {
+                        background: url('../images/content/land-1l.png') 0% 0%/ cover no-repeat;
+                    }
+                    &-two {
+                        background: url('../images/content/land3-2.png') 0% 0%/ cover no-repeat;
+                    }
+                    &-three {
+                        background: url('../images/content/dropdown.png') 0% 0%/ cover no-repeat;
+                    }
+                    @include desktopHd {
+                        width: 97px;
+                        height: 118px;
+                    }
                 }
                 &--blue {
-                    width: 149px;
-                    height: 96px;
+                    width: 30.3125rem;
+                    height: 15rem;
                     border-radius: 36px;
                     border: 1px solid #d2d2d2;
                     background-color: #3d96dd;
+                    background: url('../images/content/landbottom.png') 0% 0%/ cover no-repeat;
+                    @include desktopHd {
+                        width: 149px;
+                        height: 96px;
+                    }
                 }
                 &--black {
-                    width: 147px;
-                    height: 94px;
+                    width: 30.1875rem;
+                    height: 15rem;
                     border-radius: 36px;
                     border: 1px solid #d2d2d2;
                     background-color: #171718;
+                    background: url('../images/content/land4.png') 0% 0%/ cover no-repeat;
+                    @include desktopHd {
+                        width: 147px;
+                        height: 94px;
+                    }
                 }
             }
         }

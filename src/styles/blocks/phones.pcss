@@ -2,11 +2,15 @@
     &__triangle {
         width: 0; 
         height: 0;
-        border-bottom: 885px solid #fff;
-        border-left: 1542px solid transparent;
+        border-bottom: 1400px solid #fff;
+        border-left: 2760px solid transparent;
         position:absolute;
         top: 100px;
         right: 24px;
+        @include desktopHd {
+            border-bottom: 885px solid #fff;
+            border-left: 1542px solid transparent;
+        }
         @include desktop1400 {
             right: 20px;
             border-left: 1380px solid transparent;
@@ -27,11 +31,15 @@
     }
     &__bg {
         position: absolute;
-        top: 985px;
         bottom: 0;
         right: 24px;
-        width: 1542px;
         background: #fff;
+        top: 93.5625rem;
+        width: 2775px;
+        @include desktopHd {
+            width: 1542px;
+            top: 985px;
+        }
         @include desktop1400 {
             width: 97%;
             right: 1.5%;
@@ -53,6 +61,13 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        opacity: 0;
+        transform: translateY(50%);
+        transition: 1s;
+        &--show {
+        opacity: 1;
+        transform: translateY(0%);
+        }
         @include desktop992 {
             top: 40px;
             right: 70px;
@@ -92,8 +107,16 @@
     &__item {
         position: absolute;
         z-index: 2;
-        width: 800px;
-        height: 493px;
+        width: 80rem;
+        height: 49.8125rem;
+        @media screen and (max-width: 2700px) {
+            width: 74rem;
+            height: 46.8125rem;
+        }
+        @media screen and (max-width: 2400px) {
+            width: 800px;
+            height: 493px;
+        }
         @include desktop1400 {
             width: 750px;
         }
@@ -109,19 +132,31 @@
             width: 12.5rem;
             height: 8.4375rem;
         }
-        &:hover {
+        /* &:hover {
             animation: phone-move 3s infinite linear;
             @include phones {
                 animation: none;
             }
-        }
+        } */
         &-img {
             max-width: 100%;
             max-height: 100%;
+            width: 100%;
         }
         &--one {
-            top: 321px;
-            left: 199px;
+            top: 0.0625rem;
+            left: 37.4375rem;
+            transform: translate(-100%, 50%);
+            opacity: 0;
+            transition: 1.5s;
+            &--show {
+                transform: translate(0%);
+                opacity: 1;
+            }
+            @include desktopHd {
+                top: 321px;
+                left: 199px;
+            }
             @include desktop992 {
                 top: 224px;
                 left: 100px;
@@ -136,8 +171,19 @@
             }
         }
         &--two {
-            top: 442px;
-            left: -327px;
+            top: 19.625rem;
+            left: 0.5625rem;
+            transform: translate(-100%, 50%);
+            opacity: 0;
+            transition: 1.5s;
+            &--show {
+                transform: translate(0%);
+                opacity: 1;
+            }
+            @include desktopHd {
+                top: 442px;
+                left: -327px;
+            }
             @include desktop {
                 top: 407px;
                 left: -265px;
@@ -156,8 +202,19 @@
             }
         }
         &--three {
-            top: 760px;
-            left: -524px;
+            top: 40.5rem;
+            left: -37.75rem;
+            transform: translate(-100%, 50%);
+            opacity: 0;
+            transition: 1.5s;
+            &--show {
+                transform: translate(0%);
+                opacity: 1;
+            }
+            @include desktopHd {
+                top: 760px;
+                left: -524px;
+            }
             @include desktop {
                 top: 693px;
                 left: -430px;
@@ -177,8 +234,19 @@
             }
         }
         &--four {
-            top: 812px;
-            left: 342px;
+            top: 79.75rem;
+            left: 25.375rem;
+            transform: translate(100%, -50%);
+            opacity: 0;
+            transition: 1.5s;
+            &--show {
+                transform: translate(0%);
+                opacity: 1;
+            }
+            @include desktopHd {
+                top: 812px;
+                left: 342px;
+            }
             @include desktop {
                 top: 734px;
                 left: 305px;
@@ -197,8 +265,19 @@
             }
         }
         &--five {
-            top: 727px;
-            right: -124px;
+            top: 35.4375rem;
+            right: -3.75rem;
+            transform: translate(100%, -50%);
+            opacity: 0;
+            transition: 1.5s;
+            &--show {
+                transform: translate(0%);
+                opacity: 1;
+            }
+            @include desktopHd {
+                top: 727px;
+                right: -124px;
+            }
             @include desktop1400 {
                 top: 669px;
                 right: -195px;
@@ -221,8 +300,19 @@
             }
         }
         &--six {
-            bottom: 37px;
-            left: 148px;
+            bottom: 23.3125rem;
+            left: 63.25rem;
+            transform: translate(100%, -50%);
+            opacity: 0;
+            transition: 1.5s;
+            &--show {
+                transform: translate(0%);
+                opacity: 1;
+            }
+            @include desktopHd {
+                bottom: 37px;
+                left: 148px;
+            }
             @include desktop {
                 bottom: 3.4375rem;
                 left: 130px;
@@ -241,8 +331,19 @@
             }
         }
         &--seven {
-            bottom: 0;
-            right: -252px;
+            bottom: -200px;
+            right: -30.75rem;
+            transform: translate(100%, -50%);
+            opacity: 0;
+            transition: 1.5s;
+            &--show {
+                transform: translate(0%);
+                opacity: 1;
+            }
+            @include desktopHd {
+                bottom: 0;
+                right: -252px;
+            }
             @include desktop {
                 bottom: 50px;
                 right: -376px;
@@ -261,10 +362,23 @@
             }
         }
         &--eight {
-            width: 1160px;
-            height: 715px;
-            top: 156px;
-            right: 118px;
+            top: 8.75rem;
+            right: 32.375rem;
+            width: 108rem;
+            height: 68.8125rem;
+            transform: translate(-100%, -50%);
+            opacity: 0;
+            transition: 1.5s;
+            &--show {
+                transform: translate(0%);
+                opacity: 1;
+            }
+            @include desktopHd {
+                width: 1160px;
+                height: 715px;
+                top: 156px;
+                right: 118px;
+            }
             @include desktop1400 {
                 width: 1036px;
                 height: 680px;

@@ -1,19 +1,28 @@
 .colors {
     display: flex;
     flex-wrap: nowrap;
-    width: 2154px;
+    width: 2800px;
+    @include desktopHd {
+        width: 2154px;
+    }
     &__item {
         display: flex;
         flex-direction: column;
-        width: 718px;
+        width: 1050px;
         height: 1000px;
+        @include desktopHd {
+            width: 718px;
+        }
         @include phones {
             height: 25.5rem;
         }
         &-block {
-            width: 718px;
+            width: 1050px;
             height: 500px;
             position:relative;
+            @include desktopHd {
+                width: 718px;
+            }
             @include phones {
                 height: 12.25rem;
             }

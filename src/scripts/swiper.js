@@ -1,4 +1,3 @@
-
 window.addEventListener('DOMContentLoaded', function() {
     var mySwiper = new Swiper('.swiper-container', {
         slidesPerView: 3,
@@ -7,8 +6,8 @@ window.addEventListener('DOMContentLoaded', function() {
         spaceBetween: 0,
         centeredSlides: true,
         autoplay: {
-        delay: 2500,
-        disableOnInteraction: false,
+            delay: 2500,
+            disableOnInteraction: false,
         }
     });
 

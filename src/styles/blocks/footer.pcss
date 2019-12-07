@@ -1,7 +1,10 @@
 .footer {
-    height: 1180px;
+    height: 100.75rem;
     position: relative;
     padding: 0 24px;
+    @include desktopHd {
+        height: 1180px;
+    }
     @include desktop1400 {
         padding: 0 1.5%;
     }
@@ -21,11 +24,15 @@
     &__triangle {
         width: 0; 
         height: 0;
-        border-bottom: 606px solid #f3f3f3;
-        border-left: 1020px solid transparent;
+        border-bottom: 1000px solid #f3f3f3;
+        border-left: 1800px solid transparent;
         position:absolute;
         bottom: 0;
         right: 0; 
+        @include desktopHd {
+            border-bottom: 606px solid #f3f3f3;
+            border-left: 1020px solid transparent;
+        }
         @include tablets {
             border-bottom: 220px solid #f3f3f3;
             border-left: 368px solid transparent;
@@ -35,6 +42,13 @@
         position: absolute;
         bottom: 342px;
         left: 170px;
+        opacity: 0;
+        transform: translateY(-50%);
+        transition: 1s;
+        &--show {
+            opacity: 1;
+            transform: translateX(0%);
+        }
         @include tablets {
             bottom: 8.375rem;
             left: 2.625rem;
@@ -46,10 +60,14 @@
         &-text {
             color: #2e2e2e;
             font-family: "Montserrat";
-            font-size: 28px;
+            font-size: 4.75rem;
             font-weight: 500;
             line-height: 50px;
-            margin-bottom: 20px;
+            margin-bottom: 3.25rem;
+            @include desktopHd {
+                font-size: 28px;
+                margin-bottom: 20px;
+            }
             @include tablets {
                 margin-bottom: 0;
                 line-height: 1.125rem;
@@ -61,11 +79,14 @@
         &-link {
             color: #ff3d13;
             font-family: "Montserrat";
-            font-size: 16px;
+            font-size: 3rem;
             font-weight: 400;
             text-decoration: none;
             line-height: 1;
             z-index: 3;
+            @include desktopHd {
+                font-size: 16px;
+            }
             &:after {
                 display: block;
                 content: "";
