@@ -191,48 +191,56 @@ window.addEventListener('DOMContentLoaded', function() {
             triggerElement: '.phones__item--one'
         })
         .setClassToggle('.phones__item--one', 'phones__item--one--show')
+        .reverse(false)
         .addTo(controller);
 
     let scenePhonesItemTwo = new ScrollMagic.Scene({
             triggerElement: '.phones__item--two'
         })
         .setClassToggle('.phones__item--two', 'phones__item--two--show')
+        .reverse(false)
         .addTo(controller);
 
     let scenePhonesItemThree = new ScrollMagic.Scene({
             triggerElement: '.phones__item--three'
         })
         .setClassToggle('.phones__item--three', 'phones__item--three--show')
+        .reverse(false)
         .addTo(controller);
 
     let scenePhonesItemFour = new ScrollMagic.Scene({
             triggerElement: '.phones__item--four'
         })
         .setClassToggle('.phones__item--four', 'phones__item--four--show')
+        .reverse(false)
         .addTo(controller);
 
     let scenePhonesItemFive = new ScrollMagic.Scene({
             triggerElement: '.phones__item--five'
         })
         .setClassToggle('.phones__item--five', 'phones__item--five--show')
+        .reverse(false)
         .addTo(controller);
 
     let scenePhonesItemSix = new ScrollMagic.Scene({
             triggerElement: '.phones__item--six'
         })
         .setClassToggle('.phones__item--six', 'phones__item--six--show')
+        .reverse(false)
         .addTo(controller);
 
     let scenePhonesItemSeven = new ScrollMagic.Scene({
             triggerElement: '.phones__item--seven'
         })
         .setClassToggle('.phones__item--seven', 'phones__item--seven--show')
+        .reverse(false)
         .addTo(controller);
 
     let scenePhonesItemEight = new ScrollMagic.Scene({
             triggerElement: '.phones__item--eight'
         })
         .setClassToggle('.phones__item--eight', 'phones__item--eight--show')
+        .reverse(false)
         .addTo(controller);
 
     let sceneInstagramDescText = new ScrollMagic.Scene({
