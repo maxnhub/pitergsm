@@ -253,18 +253,21 @@ window.addEventListener('DOMContentLoaded', function() {
             triggerElement: '.instagram__item-left'
         })
         .setClassToggle('.instagram__item-left', 'instagram__item-left--show')
+        .reverse(false)
         .addTo(controller);
 
     let sceneInstagramItemCenter = new ScrollMagic.Scene({
             triggerElement: '.instagram__item-center'
         })
         .setClassToggle('.instagram__item-center', 'instagram__item-center--show')
+        .reverse(false)
         .addTo(controller);
 
     let sceneInstagramItemRight = new ScrollMagic.Scene({
             triggerElement: '.instagram__item-right'
         })
         .setClassToggle('.instagram__item-right', 'instagram__item-right--show')
+        .reverse(false)
         .addTo(controller);
 
     let sceneFooterDesc = new ScrollMagic.Scene({
